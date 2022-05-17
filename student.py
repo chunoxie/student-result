@@ -19,3 +19,6 @@ clement.speak()
 
 bennie = Student("Bennie", 21, 'Female')
 bennie.speak()
+
+samson = Student("Samson", 20, "Male")
+samson.speak()
