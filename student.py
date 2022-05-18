@@ -1,16 +1,14 @@
 """
 This creates a student object.
 """
-# Today, we'll explore interesting aspects of objects  further. 
+# Today, we'll explore interesting aspects of objects further. 
 # We'll also see how to collaborate on GitHub
 class Student:
     def __init__(self, name, age, gender):
         self.name = name
         self.age = age
         self.gender = gender
-        self.english_score = None
-        self.maths_score = None
-        self.science_score = None
+        self.subjects = {}
 
     def speak(self):
         """
@@ -18,30 +16,23 @@ class Student:
         """
         print(f"Hello! My name is {self.name} and I'm {self.age} years old.")
 
-    def enter_score(self, english, maths, science):
-        self.english_score = english
-        self.maths_score = maths
-        self.science_score = science
+    def enter_score(self):
+        new_subjects = {}
+        number_of_subjects = int(input(f"\nHow many subjects do you want to register for {self.name}? "))
+        
+        for i in range(number_of_subjects):
+            subject_name = input(f"\nEnter name of subject - {i+1}: ")
+            subject_score = int(input(f"Enter score for {subject_name}: "))
+            new_subjects[subject_name] = subject_score
+        self.subjects = new_subjects
 
     def print_scores(self):
-        if self.english_score:
-            print(f'{self.name}, your scores are as follows:\n English: {self.english_score}\n Maths: {self.maths_score}\n Science: {self.science_score}\n ')
-        else:
-            print(f'Seems there is no score for {self.name}.\nYou need to enter scores first.\nUse the method enter_score()')
+        print(f'\nSubjects for {self.name} are:\n{self.subjects}')
 
-        
-bennie = Student("Bennie", 21, 'Female')
-clement = Student("Clement", 25, 'Male')
-samson = Student("Samson", 20, "Male")
+test_student = Student("Testing", 25, 'Male')
+test_student.speak()
 
-clement.speak()
-bennie.speak()
-samson.speak()
+test_student.print_scores()
 
-samson.print_scores()
-samson.enter_score(50, 70, 80)
-samson.print_scores()
-clement.print_scores()
-
-
-
+test_student.enter_score()
+test_student.print_scores()
