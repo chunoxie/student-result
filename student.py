@@ -3,6 +3,7 @@ This creates a student object.
 """
 # Today, we'll explore interesting aspects of objects further. 
 # We'll also see how to collaborate on GitHub
+# Today will be about making modules.
 class Student:
     def __init__(self, name, age, gender):
         self.name = name
