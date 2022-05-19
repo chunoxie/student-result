@@ -32,9 +32,3 @@ class Student:
 
     def print_scores(self):
         print(f'\nSubjects for {self.name} are:\n{self.subjects}')
-
-test_student = Student()
-test_student.speak()
-
-test_student.enter_score()
-test_student.print_scores()
