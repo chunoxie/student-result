@@ -24,7 +24,7 @@ class Student:
         for i in range(number_of_subjects):
             subject_name = input(f"\nEnter name of subject - {i+1}: ")
             subject_score = int(input(f"Enter score for {subject_name}: "))
-            new_subjects[subject_name] = subject_score
+            new_subjects[subject_name] = subject_score # what does this do please?
         self.subjects = new_subjects
 
     def print_scores(self):
