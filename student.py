@@ -9,15 +9,23 @@ class Student:
         self.name = name
         self.age = age
         self.gender = gender
-        self.subjects = {}
+        self.subjects = {} 
+        # {"English": [15, 15, 15, 25, 30, 100], "Maths": [15, 15, 15, 25, 30, 100]}
         
     def enter_score(self):
-        #new_subjects = {}
         number_of_subjects = int(input(f"\nHow many subjects do you want to register for {self.name}? "))
         
         for i in range(number_of_subjects):
             subject_name = input(f"\nEnter name of subject - {i+1}: ")
-            subject_score = int(input(f"Enter score for {subject_name}: "))
-            self.subjects[subject_name] = subject_score # what does this do please?
-        #self.subjects = new_subjects
+            number_of_scores = 5
+            score_list = []
 
+            for x in range(number_of_scores):
+                score = int(input(f"Enter score {x+1} for {subject_name}: "))
+                score_list.append(score)
+
+            total = sum(score_list)
+            score_list.append(total)
+
+            self.subjects[subject_name] = score_list
+            print(f'For {subject_name}, the scores so far are: {self.subjects}')
