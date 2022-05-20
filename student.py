@@ -28,4 +28,3 @@ class Student:
             score_list.append(total)
 
             self.subjects[subject_name] = score_list
-            print(f'For {subject_name}, the scores so far are: {self.subjects}')

@@ -10,3 +10,22 @@ print(f"\nHello! My name is {test_student.name} and I'm {test_student.age} years
 test_student.enter_score()
 
 print(f'\nSubjects for {test_student.name} are:\n{test_student.subjects}')
+
+"""
+===================================
+Welcome to TechApprentice Academy.
+FINAL RESULT SHEET.
+-----------------------------------
+Student Name: Franklyn
+Student Age: 20
+Student Gender: Male
+====================================
+Subjects:
+English: 90
+Maths: 99
+Data Structures: 89
+====================================
+Average: 94.3
+Comment: Excellent
+===================================
+"""
