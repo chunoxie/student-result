@@ -1,0 +1,8 @@
+New record is being created.
+This is content from record.txt: 
+Here, we see how to test files.
+Go ahead and read it.
+New record is being created...
+This is content from record.txt: 
+Here, we see how to test files.
+Go ahead and read it.

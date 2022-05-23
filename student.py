@@ -13,6 +13,17 @@ class Student:
         # {"English": [15, 15, 15, 25, 30, 100], "Maths": [15, 15, 15, 25, 30, 100]}
         
     def enter_score(self):
+        """
+        Here you enter the scores for the students.
+        First, you'll be required to enter the number of subjects.
+        Then, for each subject, you'll enter the name and 5 scores:
+         - 1st test
+         - 2nd test
+         - 3rd test
+         - midterm test
+         - exam
+         - The scores are computed into total and added on for each subject.
+        """
         number_of_subjects = int(input(f"\nHow many subjects do you want to register for {self.name}? "))
         
         for i in range(number_of_subjects):
